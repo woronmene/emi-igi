@@ -86,14 +86,14 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
-                className="min-w-0 flex-1 rounded-l-lg border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-3 text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
+                className="min-w-0 flex-1 rounded-l-lg border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-6 text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
                 aria-label="Email for newsletter"
                 autoComplete="email"
               />
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="rounded-r-lg bg-[var(--button-bg)] px-6 py-3 font-medium text-[var(--button-text)] shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
+                className="rounded-r-lg bg-[#A08B6D] px-6 py-3 font-medium text-black cursor-pointer shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
               >
                 {status === "loading" ? "…" : "Subscribe"}
               </button>
@@ -125,26 +125,26 @@ export default function Footer() {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <div>
-            <p className="text-sm font-medium uppercase tracking-wide text-[var(--text-dark)]">
+            <p className="text-sm text-center font-medium  tracking-wide text-[var(--text-dark)]">
               Contact
             </p>
             <a
               href="mailto:Info@emi-igi.co.site"
-              className="mt-2 block text-[var(--text-dark)] hover:underline"
+              className="mt-2 block text-center font-bold text-[var(--text-dark)] hover:underline"
             >
               Info@emi-igi.co.site
             </a>
           </div>
           <div className="border-l border-[#b8b4ae]" aria-hidden />
           <div>
-            <p className="text-sm font-medium uppercase tracking-wide text-[var(--text-dark)]">
+            <p className="text-sm text-center  font-medium uppercase tracking-wide text-[var(--text-dark)]">
               Follow
             </p>
             <a
               href="https://instagram.com/emi_igi"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 flex items-center gap-2 text-[var(--text-dark)] hover:underline"
+              className="mt-2 flex items-center justify-center gap-2 text-[var(--text-dark)] hover:underline"
             >
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded overflow-hidden">
                 <svg

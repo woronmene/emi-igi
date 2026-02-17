@@ -12,6 +12,7 @@
   --accent-brown-light: #d4bc94;
   --button-bg: #c0b199;
   --button-text: #2d2a26;
+  --navbar-height: 4rem;
 }
 
 @theme inline {
