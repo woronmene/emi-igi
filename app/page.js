@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProductSection from "./components/ProductSection";
 import Footer from "./components/Footer";
+import AnimatedSectionTitle from "./components/AnimatedSectionTitle";
 import { getProducts } from "@/lib/contentful";
 
 // Fetch from Contentful on every request so new/updated products show without redeploy.
@@ -28,9 +29,9 @@ export default async function Home() {
         {/* Art Market — section title, different background, underlined product titles */}
         <section className="bg-[var(--background)]">
           <div className="mx-auto max-w-7xl px-6 pt-16 text-center md:pt-24">
-            <h2 className="text-2xl font-semibold text-[var(--text-dark)] md:text-3xl lg:text-4xl">
+            <AnimatedSectionTitle className="text-2xl font-semibold text-[var(--text-dark)] md:text-3xl lg:text-4xl">
               Art Market
-            </h2>
+            </AnimatedSectionTitle>
           </div>
           {artMarket.map((product) => (
             <ProductSection

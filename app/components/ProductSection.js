@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const transition = { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] };
+const imageVariants = {
+  off: { opacity: 0, x: -32 },
+  on: { opacity: 1, x: 0 },
+};
+const contentVariants = {
+  off: { opacity: 0, x: 32 },
+  on: { opacity: 1, x: 0 },
+};
 
 /**
- * Reusable product showcase section.
- * Desktop: two-column (image left, content right)
- * Mobile: single-column stacked (image, title, description, button)
- * @param {boolean} renderWrapper - If false, only inner content is rendered (parent provides section + bg).
- * @param {string} backgroundClass - Section background when renderWrapper is true.
- * @param {boolean} underlineTitle - Underline the product title (h2).
+ * Reusable product showcase section with scroll and hover animations.
  */
 export default function ProductSection({
   title,
@@ -20,9 +28,20 @@ export default function ProductSection({
 }) {
   const content = (
     <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-center md:gap-12 md:py-24 lg:gap-16">
-      {/* Image column */}
-      <div className="mb-10 flex-1 md:mb-0 md:max-w-[45%]">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-square">
+      {/* Image column - slides in from left */}
+      <motion.div
+        className="mb-10 flex-1 md:mb-0 md:max-w-[45%]"
+        initial="off"
+        whileInView="on"
+        viewport={{ once: true, margin: "-80px" }}
+        variants={imageVariants}
+        transition={transition}
+      >
+        <motion.div
+          className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-square"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -37,11 +56,18 @@ export default function ProductSection({
               aria-hidden
             />
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* Content column */}
-      <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
+      {/* Content column - slides in from right */}
+      <motion.div
+        className="flex flex-1 flex-col items-center text-center md:items-start md:text-left"
+        initial="off"
+        whileInView="on"
+        viewport={{ once: true, margin: "-80px" }}
+        variants={contentVariants}
+        transition={transition}
+      >
         <h2
           className={`text-xl font-semibold text-[var(--text-dark)] md:text-2xl lg:text-[24px] ${
             underlineTitle ? "underline" : ""
@@ -52,13 +78,15 @@ export default function ProductSection({
         <p className="mt-4 max-w-xl text-base leading-[50px] text-[#524F4F] md:mt-6 md:text-lg">
           {description}
         </p>
-        <Link
-          href="#collect"
-          className="mt-8 inline-block rounded-2xl bg-[var(--button-bg)] px-10 py-6 text-base font-medium text-white shadow-md ring-1 ring-black/5 transition-all hover:bg-[var(--accent-brown-light)] md:mt-10"
-        >
-          Become collector
-        </Link>
-      </div>
+        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+          <Link
+            href="#collect"
+            className="mt-8 inline-block rounded-2xl bg-[var(--button-bg)] px-10 py-6 text-base font-medium text-white shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
+          >
+            Become collector
+          </Link>
+        </motion.div>
+      </motion.div>
     </div>
   );
 

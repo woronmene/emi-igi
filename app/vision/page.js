@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AnimatedPageContent from "../components/AnimatedPageContent";
 
 export const metadata = {
   title: "Vision — ÈMÍ-ÌGI",
@@ -11,15 +12,12 @@ export default function VisionPage() {
     <div className="min-h-screen">
       <Navbar />
       <main className="bg-[var(--surface-cream)] pt-24 pb-24 md:pt-32 md:pb-32">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h1 className="font-sans text-3xl font-semibold text-[var(--text-dark)] md:text-4xl">
-            Vision
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-[var(--text-dark)]">
+        <AnimatedPageContent title="Vision">
+          <p>
             Our vision and guiding principles. Replace this placeholder with
             your vision statement and what drives ÈMÍ-ÌGI.
           </p>
-        </div>
+        </AnimatedPageContent>
       </main>
       <Footer />
     </div>

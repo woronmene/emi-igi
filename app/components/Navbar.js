@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -9,25 +10,46 @@ const navLinks = [
   { href: "/about", label: "About" },
 ];
 
+const navItem = {
+  hidden: { opacity: 0, y: -12 },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.05 * i, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 border-b border-[var(--text-dark)]/10 bg-[var(--background)]/95 shadow-[0_1px_12px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+    <motion.header
+      className="sticky top-0 left-0 right-0 z-50 border-b border-[var(--text-dark)]/10 bg-[var(--background)]/95 shadow-[0_1px_12px_rgba(0,0,0,0.08)] backdrop-blur-sm"
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       <nav
         className="mx-auto flex max-w-7xl items-center justify-end gap-10 px-6 py-4 lg:px-8"
         aria-label="Main navigation"
       >
         {/* Desktop: horizontal links, right-aligned, underlined */}
         <div className="hidden md:flex md:items-center md:gap-10">
-          {navLinks.map((link) => (
-            <Link
+          {navLinks.map((link, i) => (
+            <motion.div
               key={link.href}
-              href={link.href}
-              className="text-sm font-medium tracking-wide text-[var(--text-dark)] underline decoration-[var(--text-dark)]/60 underline-offset-4 transition-opacity hover:opacity-80"
+              variants={navItem}
+              initial="hidden"
+              animate="show"
+              custom={i}
             >
-              {link.label}
-            </Link>
+              <Link
+                href={link.href}
+                className="text-sm font-medium tracking-wide text-[var(--text-dark)] underline decoration-[var(--text-dark)]/60 underline-offset-4 transition-opacity hover:opacity-80"
+              >
+                {link.label}
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -80,6 +102,6 @@ export default function Navbar() {
           ))}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

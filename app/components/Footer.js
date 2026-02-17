@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Logo() {
   return (
@@ -64,7 +65,13 @@ export default function Footer() {
     >
       <div className="mx-auto max-w-4xl px-6 py-12 md:py-16">
         {/* Newsletter */}
-        <div className="flex flex-col items-center gap-6 text-center">
+        <motion.div
+          className="flex flex-col items-center gap-6 text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <h2 className="text-xl font-semibold text-[var(--text-dark)] md:text-2xl">
             Join our newsletter
           </h2>
@@ -104,13 +111,19 @@ export default function Footer() {
               </p>
             )}
           </form>
-        </div>
+        </motion.div>
 
         {/* Separator */}
         <div className="my-12 border-t border-[#b8b4ae] md:my-16" />
 
         {/* Contact & Follow */}
-        <div className="grid grid-cols-[1fr_auto_1fr] gap-8 md:gap-12">
+        <motion.div
+          className="grid grid-cols-[1fr_auto_1fr] gap-8 md:gap-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <div>
             <p className="text-sm font-medium uppercase tracking-wide text-[var(--text-dark)]">
               Contact
@@ -160,13 +173,19 @@ export default function Footer() {
               <span>@emi_igi</span>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Separator */}
         <div className="my-12 border-t border-[#b8b4ae] md:my-16" />
 
         {/* Copyright & legal */}
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+        <motion.div
+          className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <Logo />
           <p className="text-sm text-[var(--text-dark)]/70">
             2025 EMI-IGI. All rights reserved.{" "}
@@ -178,7 +197,7 @@ export default function Footer() {
               Terms of Service
             </Link>
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
