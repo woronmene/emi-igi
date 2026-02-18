@@ -12,7 +12,7 @@ const transition = { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] };
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] w-full pt-[var(--navbar-height)] -mt-[var(--navbar-height)] md:min-h-[90vh]">
+    <section className="relative min-h-[55vh] w-full pt-[var(--navbar-height)] -mt-[var(--navbar-height)] md:min-h-[90vh]">
       {/* Background image - extends under navbar so transparent nav shows hero */}
       <motion.div
         className="absolute inset-0"

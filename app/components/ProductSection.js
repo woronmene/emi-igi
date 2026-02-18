@@ -47,7 +47,7 @@ export default function ProductSection({
               src={imageSrc}
               alt={imageAlt || "Product"}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 45vw"
             />
           ) : (

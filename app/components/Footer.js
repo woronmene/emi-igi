@@ -130,7 +130,7 @@ export default function Footer() {
             </p>
             <a
               href="mailto:Info@emi-igi.co.site"
-              className="mt-2 block text-center font-bold text-[var(--text-dark)] hover:underline"
+              className="mt-2 block text-center text-[14px] whitespace-nowrap md:text-[24px] font-bold text-[var(--text-dark)] hover:underline"
             >
               Info@emi-igi.co.site
             </a>

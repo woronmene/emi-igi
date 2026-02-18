@@ -125,7 +125,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — always dark text on light background so it's readable */}
       <div
         id="mobile-menu"
         className={`border-t border-[var(--text-dark)]/10 bg-[var(--background)] px-6 py-4 shadow-[0_4px_12px_rgba(0,0,0,0.08)] md:hidden ${
@@ -137,7 +137,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-base font-medium tracking-wide transition-opacity hover:opacity-80 ${linkClass}`}
+              className="text-base font-medium tracking-wide text-[var(--text-dark)] underline decoration-[var(--text-dark)]/60 underline-offset-4 transition-opacity hover:opacity-80"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.label}
