@@ -31,7 +31,8 @@ export default function Navbar() {
 
   const isHome = pathname === "/";
   const overHero = isHome && !scrolled;
-  const showLogo = pathname === "/vision" || pathname === "/about";
+  const showLogo =
+    pathname === "/" || pathname === "/vision" || pathname === "/about";
   const linkClass = overHero
     ? "text-[var(--text-light)] underline decoration-[var(--text-light)]/70 underline-offset-4"
     : "text-[var(--text-dark)] underline decoration-[var(--text-dark)]/60 underline-offset-4";
@@ -58,18 +59,21 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <nav
-        className={`mx-auto flex max-w-7xl items-center gap-10 px-6 py-4 lg:px-8 ${showLogo ? "justify-between" : "justify-end"}`}
+        className={`mx-auto flex max-w-7xl items-center gap-10 px-6 py-4   lg:px-8 ${showLogo ? "justify-end" : "justify-end"}`}
         aria-label="Main navigation"
       >
-        {/* Logo on Vision / About — left side, links to home */}
+        {/* Logo on Home / Vision / About — left side, links to home */}
         {showLogo && (
-          <Link href="/" className="relative h-8 w-auto shrink-0 md:h-9">
+          <Link
+            href="/"
+            className="absolute left-6  h-10 w-auto shrink-0 md:h-12"
+          >
             <Image
               src="/images/emi-logo.svg"
               alt="ÈMÍ-ÌGI — Home"
-              width={100}
-              height={36}
-              className="h-8 w-auto object-contain object-left md:h-9"
+              width={140}
+              height={48}
+              className="h-10 w-auto object-contain object-left md:h-12"
             />
           </Link>
         )}

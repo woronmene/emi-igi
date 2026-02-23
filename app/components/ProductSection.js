@@ -27,7 +27,7 @@ export default function ProductSection({
   underlineTitle = false,
 }) {
   const content = (
-    <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-center md:gap-12 md:py-24 lg:gap-16">
+    <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-12 md:py-24 lg:gap-16">
       {/* Image column - slides in from left */}
       <motion.div
         className="mb-10 flex-1 md:mb-0 md:max-w-[45%]"
@@ -61,7 +61,7 @@ export default function ProductSection({
 
       {/* Content column - slides in from right */}
       <motion.div
-        className="flex flex-1 flex-col items-center text-center md:items-start md:text-left"
+        className="flex flex-1 flex-col items-center justify-end  text-center md:items-start md:text-left"
         initial="off"
         whileInView="on"
         viewport={{ once: true, margin: "-80px" }}
@@ -80,7 +80,9 @@ export default function ProductSection({
         </p>
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
           <Link
-            href="#collect"
+            href="https://wa.me/2349153081531?text=Hi%20Emi-igi%2C%20I%20would%20like%20to%20speak%20about%20a%20commission%20of%20one%20of%20the%20pieces"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block rounded-2xl bg-[var(--button-bg)] px-10 py-6 text-base font-medium text-white shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
           >
             Become collector

@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 
 function Logo() {
   return (
-    <div className="relative h-10 w-auto">
+    <div className="relative h-12 w-auto">
       <Image
         src="/images/emi-logo.svg"
         alt="Emi-igi"
-        width={120}
-        height={40}
-        className="h-10 w-auto object-contain object-left"
+        width={144}
+        height={48}
+        className="h-12 w-auto object-contain object-left"
       />
     </div>
   );
