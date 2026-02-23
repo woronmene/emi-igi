@@ -59,14 +59,14 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <nav
-        className={`mx-auto flex max-w-7xl items-center gap-10 px-6 py-4  lg:px-8 ${showLogo ? "justify-end" : "justify-end"}`}
+        className={`mx-auto flex max-w-7xl  items-center gap-10 px-6 py-4  lg:px-8 ${showLogo ? "justify-end" : "justify-end"}`}
         aria-label="Main navigation"
       >
         {/* Logo on Home / Vision / About — left side, links to home */}
         {showLogo && (
           <Link
             href="/"
-            className="absolute left-0 md:left-6  h-10 w-auto shrink-0 md:h-12"
+            className="absolute z-1 left-2 md:left-6  h-10 w-auto shrink-0 md:h-12"
           >
             <Image
               src="/images/emi-logo.svg"

@@ -69,13 +69,13 @@ export default function ProductSection({
         transition={transition}
       >
         <h2
-          className={`text-xl font-semibold text-[var(--text-dark)] md:text-2xl lg:text-[24px] ${
+          className={`text-xl font-bold text-[var(--text-dark)] md:text-2xl lg:text-[24px] ${
             underlineTitle ? "underline" : ""
           }`}
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-base leading-[30px] text-[#524F4F] md:mt-6 md:text-lg">
+        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-6 md:text-lg">
           {description}
         </p>
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>

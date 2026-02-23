@@ -32,7 +32,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Content - staggered reveal */}
-      <div className="absolute z-10 flex flex-col w-full items-center justify-center bottom-16 left-1/2 -translate-x-1/2">
+      <div className="absolute z-10 flex flex-col w-full items-center justify-center lg:bottom-16 bottom-8 left-1/2 -translate-x-1/2">
         <motion.h1
           className="text-center text-5xl font-semibold tracking-tight text-[var(--text-light)] drop-shadow-lg md:text-7xl lg:text-8xl"
           variants={fadeUp}
