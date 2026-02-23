@@ -28,9 +28,9 @@ export default function ProductSection({
 }) {
   const content = (
     <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-12 md:py-24 lg:gap-16">
-      {/* Image column - slides in from left */}
+      {/* Image column - slides in from left; full-bleed + larger aspect on mobile */}
       <motion.div
-        className="mb-10 flex-1 md:mb-0 md:max-w-[45%]"
+        className="-mx-6 mb-10 flex justify-center flex-1 md:mx-0 md:mb-0  md:max-w-[45%]"
         initial="off"
         whileInView="on"
         viewport={{ once: true, margin: "-80px" }}
@@ -38,7 +38,7 @@ export default function ProductSection({
         transition={transition}
       >
         <motion.div
-          className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-square"
+          className="relative aspect-[4/3] h-[400px] md:h-[500px] overflow-hidden rounded-none md:aspect-square md:rounded-lg"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
         >
@@ -75,7 +75,7 @@ export default function ProductSection({
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-base leading-[50px] text-[#524F4F] md:mt-6 md:text-lg">
+        <p className="mt-4 max-w-xl text-base leading-[30px] text-[#524F4F] md:mt-6 md:text-lg">
           {description}
         </p>
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>

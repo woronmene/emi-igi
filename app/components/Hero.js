@@ -32,7 +32,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Content - staggered reveal */}
-      <div className="absolute z-10 flex flex-col items-center justify-center bottom-22 left-1/2 -translate-x-1/2">
+      <div className="absolute z-10 flex flex-col w-full items-center justify-center bottom-16 left-1/2 -translate-x-1/2">
         <motion.h1
           className="text-center text-5xl font-semibold tracking-tight text-[var(--text-light)] drop-shadow-lg md:text-7xl lg:text-8xl"
           variants={fadeUp}
@@ -52,7 +52,7 @@ export default function Hero() {
             href="https://wa.me/2349153081531?text=Hi%20Emi-igi%2C%20I%20would%20like%20to%20speak%20about%20a%20commission%20of%20one%20of%20the%20pieces"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-[14px] border-2 border-[#FAFAFA]/[0.69] bg-[#FFFFFF]/[0.39] flex items-center justify-center text-center w-[400px] py-4 text-base text-[#FFFFFF] transition-all hover:bg-[#FFFFFF]/[0.5] md:mt-10 md:py-8 md:text-[24px]"
+            className="mt-8 inline-block rounded-[14px] border-2 border-[#FAFAFA]/[0.69] bg-[#FFFFFF]/[0.39] flex items-center justify-center w-[200px] text-center md:w-[400px] py-4 text-base text-[#FFFFFF] transition-all hover:bg-[#FFFFFF]/[0.5] md:mt-10 md:py-8 md:text-[24px]"
           >
             <span>Become Collector</span>
           </Link>
