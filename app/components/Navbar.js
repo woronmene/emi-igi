@@ -66,7 +66,7 @@ export default function Navbar() {
         {showLogo && (
           <Link
             href="/"
-            className="absolute z-1 left-2 md:left-6  h-10 w-auto shrink-0 md:h-12"
+            className="absolute z-1 left-0 md:left-6  h-10 w-auto shrink-0 md:h-12"
           >
             <Image
               src="/images/emi-logo.svg"

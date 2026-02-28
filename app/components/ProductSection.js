@@ -38,7 +38,7 @@ export default function ProductSection({
         transition={transition}
       >
         <motion.div
-          className="relative aspect-[4/3] h-[400px] md:h-[500px] overflow-hidden rounded-none md:aspect-square md:rounded-lg"
+          className="relative aspect-[4/3] h-[400px] md:h-[450px] overflow-hidden rounded-none md:aspect-square md:rounded-lg"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
         >
@@ -75,7 +75,7 @@ export default function ProductSection({
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-6 md:text-lg">
+        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-6 md:text-[16px]">
           {description}
         </p>
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
@@ -83,7 +83,7 @@ export default function ProductSection({
             href="https://wa.me/2349153081531?text=Hi%20Emi-igi%2C%20I%20would%20like%20to%20speak%20about%20a%20commission%20of%20one%20of%20the%20pieces"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-2xl bg-[var(--button-bg)] px-10 py-6 text-base font-medium text-white shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
+            className="mt-8 inline-block rounded-2xl bg-[#A08B6D]  px-10 py-6 text-base font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
           >
             Become collector
           </Link>
