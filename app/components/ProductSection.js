@@ -85,7 +85,7 @@ export default function ProductSection({
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-2xl bg-[#A08B6D]  px-10 py-6 text-base font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
           >
-            Become collector
+            Become a Collector
           </Link>
         </motion.div>
       </motion.div>

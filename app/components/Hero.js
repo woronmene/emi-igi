@@ -54,7 +54,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-[14px] border-2 border-[#FAFAFA]/[0.69] bg-[#FFFFFF]/[0.39] flex items-center justify-center w-[200px] text-center md:w-[400px] py-4 text-base text-[#FFFFFF] transition-all hover:bg-[#FFFFFF]/[0.5] md:mt-10 md:py-8 md:text-[24px]"
           >
-            <span>Become Collector</span>
+            <span>Become a Collector</span>
           </Link>
         </motion.div>
       </div>
