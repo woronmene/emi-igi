@@ -12,7 +12,7 @@ export default function AnimatedPageContent({ title, children }) {
   return (
     <div className="mx-auto max-w-3xl px-6 text-center">
       <motion.h1
-        className="font-sans text-3xl font-semibold text-[var(--text-dark)] md:text-4xl"
+        className="font-sans text-3xl font-semibold underline text-[var(--text-dark)] md:text-4xl"
         variants={fadeUp}
         initial="initial"
         animate="animate"
@@ -21,7 +21,7 @@ export default function AnimatedPageContent({ title, children }) {
         {title}
       </motion.h1>
       <motion.div
-        className="mt-6 text-lg leading-relaxed text-[var(--text-dark)]"
+        className="mt-16 text-md leading-relaxed font-light text-[var(--text-dark)]"
         variants={fadeUp}
         initial="initial"
         animate="animate"
