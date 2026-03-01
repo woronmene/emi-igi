@@ -80,7 +80,7 @@ export default function ProductSection({
         </p>
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
           <Link
-            href="https://wa.me/2349153081531?text=Hi%20Emi-igi%2C%20I%20would%20like%20to%20speak%20about%20a%20commission%20of%20one%20of%20the%20pieces"
+            href="https://wa.me/2349153081531?text=Hello%2CEmi%20Igi%20.%20I%20would%20like%20to%20inquire%20about%20a%20commission%20for%20your%20work%E2%80%A6"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-2xl bg-[#A08B6D]  px-10 py-6 text-base font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
