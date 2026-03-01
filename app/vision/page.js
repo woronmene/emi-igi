@@ -14,8 +14,11 @@ export default function VisionPage() {
       <main className="bg-[var(--surface-cream)] pt-24 pb-24 md:pt-32 md:pb-32">
         <AnimatedPageContent title="Vision">
           <p>
-            Our vision and guiding principles. Replace this placeholder with
-            your vision statement and what drives ÈMÍ-ÌGI.
+            At ÈMÍ-IGI, we create functional relics designed to slow the moment.
+            Our works are made to cause pause—objects that hold meaning as much
+            as they serve purpose. Through careful craftsmanship, we translate
+            what matters most to our clients into forms that live quietly, yet
+            powerfully, within their spaces
           </p>
         </AnimatedPageContent>
       </main>
