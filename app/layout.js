@@ -21,9 +21,19 @@ export const metadata = {
     "Artisanal handcrafted pieces — more than illumination, more than objects.",
   icons: {
     icon: [
-      { url: "/images/emi-logo.ico" },
+      // Classic favicon (also duplicated to /favicon.ico)
+      { url: "/favicon.ico" },
+      { url: "/images/emi-logo.ico", type: "image/x-icon" },
+      // PNG variant Safari and others often prefer
       { url: "/images/emi-logo.png", type: "image/png" },
+      // Vector fallback for modern browsers
       { url: "/images/emi-logo.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      {
+        url: "/images/emi-logo.png",
+        rel: "apple-touch-icon",
+      },
     ],
   },
   openGraph: {
