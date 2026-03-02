@@ -22,6 +22,7 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/images/emi-logo.ico" },
+      { url: "/images/emi-logo.png", type: "image/png" },
       { url: "/images/emi-logo.svg", type: "image/svg+xml" },
     ],
   },
