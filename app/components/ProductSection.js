@@ -85,7 +85,7 @@ export default function ProductSection({
             <motion.div className="flex flex-1 max-w-[200px] md:max-w-[240px]" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href={`/pieces/${slug}`}
-                className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-white px-2 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-black shadow-sm ring-1 ring-black/10 transition-all hover:bg-black/5 hover:ring-black/20"
+                className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-white px-2 py-5 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-black shadow-sm ring-1 ring-black/10 transition-all hover:bg-black/5 hover:ring-black/20"
               >
                 See description
               </Link>

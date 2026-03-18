@@ -75,13 +75,13 @@ export default async function ProductDetailPage({ params }) {
         />
 
         {/* Text sections */}
-        <section className="mt-10 space-y-10 md:mt-14 md:space-y-12">
+        <section className="mt-10 space-y-10 md:mt-24 md:space-y-24">
           <p className="mx-auto max-w-3xl text-center text-[15px] leading-[1.9] text-[#494545]/70 md:text-[16px]">
             {detailIntro || description}
           </p>
 
           {(delivery || authenticity) && (
-            <div className="mx-auto max-w-3xl space-y-10 text-center">
+            <div className="mx-auto max-w-3xl space-y-24 text-center">
               {delivery && (
                 <div>
                   <h2
