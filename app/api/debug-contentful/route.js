@@ -27,9 +27,14 @@ export async function GET() {
     return NextResponse.json({ message: "No products found", items: [] });
   }
 
-  // Serialize a safe view of the first entry and its image field
+  // Serialize a safe view of the first entry and its fields
   const fields = item.fields || {};
-  const imageField = fields.image ?? fields.Image ?? null;
+  const imageField =
+    fields.image ??
+    fields.Image ??
+    fields.productImage ??
+    fields.product_image ??
+    null;
   const imageKeys = imageField ? Object.keys(imageField) : [];
   const imageSys = imageField?.sys ? { ...imageField.sys } : null;
   const imageFieldsKeys = imageField?.fields
@@ -46,6 +51,16 @@ export async function GET() {
     message: "First product entry structure (for debugging image)",
     entryId: item.sys?.id,
     fieldNames: Object.keys(fields),
+    fieldsPreview: {
+      slug: fields.slug ?? null,
+      category: fields.category ?? null,
+      detailIntro: fields.detailIntro ?? null,
+      delivery: fields.delivery ?? null,
+      authenticity: fields.authenticity ?? null,
+      galleryImagesCount: Array.isArray(fields.galleryImages)
+        ? fields.galleryImages.length
+        : null,
+    },
     image: {
       imageFieldExists: !!imageField,
       imageKeys,

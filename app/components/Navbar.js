@@ -63,7 +63,7 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo on Home / Vision / About — left side, links to home */}
-        {showLogo && (
+        {/* {showLogo && (
           <Link
             href="/"
             className="absolute z-1 left-0 md:left-6  h-10 w-auto shrink-0 md:h-12"
@@ -76,7 +76,7 @@ export default function Navbar() {
               className="h-8 md:h-10 w-auto object-contain object-left md:h-12"
             />
           </Link>
-        )}
+        )} */}
 
         <div className="flex items-center gap-10">
           {/* Desktop: horizontal links, underlined */}

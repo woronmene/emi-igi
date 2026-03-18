@@ -22,6 +22,8 @@ export default function ProductSection({
   description,
   imageSrc,
   imageAlt,
+  slug,
+  isSculpture = false,
   renderWrapper = true,
   backgroundClass = "bg-[var(--surface-cream)]",
   underlineTitle = false,
@@ -78,16 +80,29 @@ export default function ProductSection({
         <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-6 md:text-[16px]">
           {description}
         </p>
-        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-          <Link
-            href="https://wa.me/2349153081531?text=Hello%2CEmi%20Igi%20.%20I%20would%20like%20to%20inquire%20about%20a%20commission%20for%20your%20work%E2%80%A6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-2xl bg-[#A08B6D]  px-10 py-6 text-base font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] md:mt-10"
-          >
-            Become a Collector
-          </Link>
-        </motion.div>
+        <div className="mt-8 flex w-full flex-row justify-center gap-3 sm:gap-4 md:justify-start md:mt-10">
+          {isSculpture && slug && (
+            <motion.div className="flex w-1/2 max-w-[145px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[230px]" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href={`/pieces/${slug}`}
+                className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-white px-1 text-center text-[10px] sm:text-xs md:text-sm font-medium text-black shadow-sm ring-1 ring-black/10 transition-all hover:bg-black/5 hover:ring-black/20"
+              >
+                See description
+              </Link>
+            </motion.div>
+          )}
+
+          <motion.div className={`flex ${isSculpture && slug ? "w-1/2" : "w-full"} max-w-[145px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[230px]`} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+            <Link
+              href="https://wa.me/2349153081531?text=Hello%2CEmi%20Igi%20.%20I%20would%20like%20to%20inquire%20about%20a%20commission%20for%20your%20work%E2%80%A6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-[#A08B6D] px-1 text-center text-[10px] sm:text-xs md:text-sm font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)]"
+            >
+              Become a Collector
+            </Link>
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );

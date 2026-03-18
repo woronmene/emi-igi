@@ -24,6 +24,8 @@ export default async function Home() {
             description={product.description}
             imageSrc={product.imageSrc}
             imageAlt={product.imageAlt}
+            slug={product.slug}
+            isSculpture
           />
         ))}
         {/* Art Market — section title, different background, underlined product titles */}
