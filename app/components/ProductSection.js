@@ -17,7 +17,7 @@ const contentVariants = {
 };
 
 const buttonMotionClass =
-  "flex w-full aspect-[145/35] items-center justify-center rounded-none px-2 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium transition-transform duration-150 active:scale-[0.98] hover:scale-[1.03]";
+  "flex w-full aspect-[135/45] md:aspect-[145/35] items-center justify-center rounded-none px-2 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium transition-transform duration-150 active:scale-[0.98] hover:scale-[1.03]";
 
 /**
  * Reusable product showcase section with scroll and hover animations.
@@ -29,6 +29,7 @@ export default function ProductSection({
   imageAlt,
   slug,
   isSculpture = false,
+  isArtMarket = false,
   renderWrapper = true,
   backgroundClass = "bg-[#E1D7C6]",
   underlineTitle = false,
@@ -89,7 +90,11 @@ export default function ProductSection({
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-[12px] font-light leading-[22px] text-[#524F4F] md:mt-3 md:text-[16px] md:leading-[30px]">
+        <p
+          className={`mt-4 max-w-xl text-[12px] font-light leading-[52px] md:mt-3 md:text-[16px] ${
+            isArtMarket ? "text-[#808080]" : "text-[#524F4F]/80"
+          }`}
+        >
           {description}
         </p>
         <div className="mt-8 flex w-full flex-row justify-center gap-3 sm:gap-4 md:justify-start md:mt-10">

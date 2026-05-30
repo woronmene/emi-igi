@@ -43,6 +43,7 @@ export default async function Home() {
               imageSrc={product.imageSrc}
               imageAlt={product.imageAlt}
               renderWrapper={false}
+              isArtMarket
               underlineTitle
             />
           ))}
