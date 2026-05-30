@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { getProductBySlug, getProducts } from "@/lib/contentful";
 
-export const revalidate = 10;
+// Pre-render product pages at build; revalidate hourly (CMS content rarely changes).
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   try {

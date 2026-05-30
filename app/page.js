@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 import AnimatedSectionTitle from "./components/AnimatedSectionTitle";
 import { getProducts } from "@/lib/contentful";
 
-// Fetch from Contentful with 10s background revalidation (ISR) for instant load times.
-export const revalidate = 10;
+// Fetch from Contentful with hourly background revalidation.
+export const revalidate = 3600;
 
 export default async function Home() {
   const { sculptedArt, artMarket } = await getProducts();
