@@ -47,7 +47,9 @@ export default function ProductSection({
     <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-3 md:py-20 lg:gap-4">
       {/* Image column - slides in from left; full-bleed + larger aspect on mobile */}
       <motion.div
-        className="-mx-6 mb-[12px] flex justify-center flex-1 md:mx-0 md:mb-0 md:max-w-[48%]"
+        className={`-mx-6 mb-[12px] flex justify-center flex-1 md:mx-0 md:mb-0 ${
+          isArtMarket ? "md:max-w-[36%]" : "md:max-w-[48%]"
+        }`}
         initial="off"
         whileInView="on"
         viewport={{ once: true, margin: "-80px" }}
@@ -55,7 +57,11 @@ export default function ProductSection({
         transition={transition}
       >
         <motion.div
-          className="relative aspect-[4/3] h-[350px] md:h-[450px] overflow-hidden rounded-none md:aspect-square md:rounded-lg"
+          className={`relative aspect-[4/3] overflow-hidden rounded-none md:aspect-square md:rounded-lg ${
+            isArtMarket
+              ? "h-[262.5px] md:h-[337.5px]"
+              : "h-[350px] md:h-[450px]"
+          }`}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
         >
