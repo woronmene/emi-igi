@@ -28,8 +28,8 @@ export default async function Home() {
             isSculpture
           />
         ))}
-        {/* Art Market — section title, different background, underlined product titles */}
-        <section className="bg-[var(--background)]">
+        {/* Art Market — section title, light background, underlined product titles */}
+        <section className="bg-[#FAFAFA]">
           <div className="mx-auto max-w-7xl px-6 pt-16 text-center md:pt-24">
             <AnimatedSectionTitle className="text-2xl font-semibold text-[var(--text-dark)] md:text-3xl lg:text-4xl">
               Art Market

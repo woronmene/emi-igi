@@ -89,7 +89,7 @@ export default function ProductSection({
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-3 md:text-[16px]">
+        <p className="mt-4 max-w-xl text-[12px] font-light leading-[22px] text-[#524F4F] md:mt-3 md:text-[16px] md:leading-[30px]">
           {description}
         </p>
         <div className="mt-8 flex w-full flex-row justify-center gap-3 sm:gap-4 md:justify-start md:mt-10">
