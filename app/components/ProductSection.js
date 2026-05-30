@@ -47,7 +47,7 @@ export default function ProductSection({
     <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-3 md:py-20 lg:gap-4">
       {/* Image column - slides in from left; full-bleed + larger aspect on mobile */}
       <motion.div
-        className="-mx-6 mb-4 flex justify-center flex-1 md:mx-0 md:mb-0 md:max-w-[48%]"
+        className="-mx-6 mb-[12px] flex justify-center flex-1 md:mx-0 md:mb-0 md:max-w-[48%]"
         initial="off"
         whileInView="on"
         viewport={{ once: true, margin: "-80px" }}
@@ -86,12 +86,12 @@ export default function ProductSection({
         transition={transition}
       >
         <h2
-          className="text-xl font-bold text-[var(--text-dark)] md:text-2xl lg:text-[24px]"
+          className="text-[13px] font-bold text-[var(--text-dark)] md:text-2xl lg:text-[24px]"
         >
           {title}
         </h2>
         <p
-          className={`mt-4 max-w-xl text-[12px] font-light leading-[52px] md:mt-3 md:text-[16px] ${
+          className={`mt-4 max-w-xl text-[11px] font-light leading-[20px] md:mt-3 md:text-[16px] md:leading-[52px] ${
             isArtMarket ? "text-[#808080]" : "text-[#524F4F]/80"
           }`}
         >
