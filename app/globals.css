@@ -5,7 +5,7 @@
   --background: #E1D7C6;
   --foreground: #2d2a26;
   --surface-dark: #0d0d0d;
-  --surface-cream: #e8e0d7;
+  --surface-cream: #E1D7C6;
   --text-light: #faf8f5;
   --text-dark: #2d2a26;
   --accent-brown: #c4a77d;
@@ -21,8 +21,9 @@
   --font-sans: var(--font-inknut-antiqua), ui-serif, Georgia, serif;
 }
 
+html,
 body {
-  background: var(--background);
+  background: #E1D7C6;
   color: var(--foreground);
   font-family: var(--font-inknut-antiqua), ui-serif, Georgia, serif;
   overflow-x: hidden;

@@ -11,7 +11,7 @@ export default function VisionPage() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="bg-[var(--surface-cream)] pt-24 pb-24 md:pt-32 md:pb-32">
+      <main className="bg-[#E1D7C6] pt-24 pb-24 md:pt-32 md:pb-32">
         <AnimatedPageContent title="Vision">
           <p>
             At ÈMÍ-IGI, we create functional relics designed to slow the moment.

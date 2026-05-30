@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="bg-[var(--surface-cream)] pt-24 pb-24 md:pt-32 md:pb-32">
+      <main className="bg-[#E1D7C6] pt-24 pb-24 md:pt-32 md:pb-32">
         <AnimatedPageContent title="About">
           <p>
             ÈMÍ-IGI is a design studio dedicated to the creation of functional

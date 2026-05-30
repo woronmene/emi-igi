@@ -30,7 +30,7 @@ export default function ProductSection({
   slug,
   isSculpture = false,
   renderWrapper = true,
-  backgroundClass = "bg-[var(--surface-cream)]",
+  backgroundClass = "bg-[#E1D7C6]",
   underlineTitle = false,
 }) {
   const router = useRouter();
