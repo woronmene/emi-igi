@@ -72,7 +72,7 @@ export default function Footer() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <h2 className="text-xl font-semibold text-[var(--text-dark)] md:text-2xl">
+          <h2 className="text-base font-semibold text-[var(--text-dark)] md:text-lg">
             Join our newsletter
           </h2>
           <form
@@ -86,14 +86,14 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
-                className="min-w-0 flex-1 rounded-none border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-6 text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
+                className="min-w-0 flex-1 rounded-none border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-6 text-sm text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
                 aria-label="Email for newsletter"
                 autoComplete="email"
               />
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="rounded-none bg-[#A08B6D] px-6 py-3 font-medium text-black cursor-pointer shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
+                className="rounded-none bg-[#A08B6D] px-6 py-3 text-sm font-medium text-black cursor-pointer shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
               >
                 {status === "loading" ? "…" : "Subscribe"}
               </button>
@@ -101,7 +101,7 @@ export default function Footer() {
             {message && (
               <p
                 role="alert"
-                className={`text-sm ${
+                className={`text-xs ${
                   status === "success"
                     ? "text-[var(--text-dark)]"
                     : "text-red-700"
@@ -125,31 +125,31 @@ export default function Footer() {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <div>
-            <p className="text-sm text-center font-medium  tracking-wide text-[var(--text-dark)]">
+            <p className="text-xs text-center font-medium tracking-wide text-[var(--text-dark)]">
               Contact
             </p>
             <a
               href="mailto:Info@emi-igi.co.site"
-              className="mt-2 block text-center text-[14px] whitespace-nowrap md:text-[24px] font-bold text-[var(--text-dark)] hover:underline"
+              className="mt-2 block text-center text-[12px] whitespace-nowrap md:text-[18px] font-bold text-[var(--text-dark)] hover:underline"
             >
               Info@emi-igi.co.site
             </a>
           </div>
           <div className="border-l border-[#b8b4ae]" aria-hidden />
           <div>
-            <p className="text-sm text-center  font-medium uppercase tracking-wide text-[var(--text-dark)]">
+            <p className="text-xs text-center font-medium uppercase tracking-wide text-[var(--text-dark)]">
               Follow
             </p>
             <a
               href="https://instagram.com/emi_igi"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 flex items-center justify-center gap-2 text-[var(--text-dark)] hover:underline"
+              className="mt-2 flex items-center justify-center gap-2 text-sm text-[var(--text-dark)] hover:underline"
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded overflow-hidden">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded overflow-hidden">
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="url(#ig-gradient)"
                   aria-hidden
@@ -187,7 +187,7 @@ export default function Footer() {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <Logo />
-          <p className="text-sm text-[var(--text-dark)]/70">
+          <p className="text-xs text-[var(--text-dark)]/70">
             2025 EMI-IGI. All rights reserved.{" "}
             <Link href="/privacy" className="hover:underline">
               Privacy Policy

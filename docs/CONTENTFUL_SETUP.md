@@ -36,6 +36,20 @@
 
 6. Click **Save** to save the content type.
 
+### Optional fields for product detail pages
+
+Add these fields to the **Product** content type if you want the “See description” page to show extra sections. The site reads them automatically once published — no code changes needed.
+
+| Display name   | API identifier | Type       | Used for                                      |
+| -------------- | -------------- | ---------- | --------------------------------------------- |
+| Slug           | slug           | Short text | URL path, e.g. `atupa-oorun` → `/pieces/atupa-oorun` |
+| Detail intro   | detailIntro    | Long text  | Longer opening text on the detail page        |
+| Dimensions     | dimensions     | Long text  | **Dimensions** section (separate values with `\|`, `,`, or `;`) |
+| Delivery       | delivery       | Long text  | **Delivery** section                          |
+| Authenticity   | authenticity   | Long text  | **Authenticity** section                      |
+
+**Note:** The site uses the **Content delivery API** (read-only). Add or edit these fields in the Contentful web app under **Content model** → **Product** → **Add field**. This project cannot modify your Contentful space directly.
+
 ---
 
 ## 3. Get your API keys

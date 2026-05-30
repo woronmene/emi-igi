@@ -19,6 +19,17 @@ export async function generateStaticParams() {
   }
 }
 
+const sectionHeadingClass =
+  "text-[13px] font-bold text-[var(--text-dark)] tracking-widest md:text-xl md:underline lg:text-[18px] md:text-[#494545]";
+
+function detailBodyClass(isArtMarket) {
+  return `text-[11px] font-light leading-[20px] md:text-[16px] md:leading-[1.9] ${
+    isArtMarket
+      ? "text-[#808080] md:text-[#494545]/70"
+      : "text-[#524F4F]/80 md:text-[#494545]/70"
+  }`;
+}
+
 export default async function ProductDetailPage({ params }) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
@@ -54,7 +65,11 @@ export default async function ProductDetailPage({ params }) {
     delivery,
     authenticity,
     dimensions,
+    category,
   } = product;
+
+  const isArtMarket = category === "drawing";
+  const bodyClass = detailBodyClass(isArtMarket);
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
@@ -66,7 +81,6 @@ export default async function ProductDetailPage({ params }) {
           Back
         </Link>
 
-        {/* Centered single image without surrounding grey container box */}
         <div className="mt-8 md:mt-12 w-full max-w-2xl flex justify-center">
           {imageSrc ? (
             <div className="relative aspect-square w-full max-w-xl overflow-hidden">
@@ -82,36 +96,35 @@ export default async function ProductDetailPage({ params }) {
           ) : null}
         </div>
 
-        {/* Text sections */}
         <section className="mt-6 space-y-10 md:mt-10 md:space-y-24 w-full">
-          <p className="mx-auto max-w-3xl text-center text-[15px] leading-[1.9] text-[#494545]/70 md:text-[16px]">
+          <h1 className={`mx-auto max-w-3xl text-center ${productTitleClass}`}>
+            {title}
+          </h1>
+
+          <p className={`mx-auto max-w-3xl text-center ${bodyClass}`}>
             {detailIntro || description}
           </p>
 
           {(dimensions || delivery || authenticity) && (
-            <div className="mx-auto max-w-3xl space-y-24 text-center">
+            <div className="mx-auto max-w-3xl space-y-10 text-center md:space-y-24">
               {dimensions && (
                 <div>
-                  <h2
-                    className="text-xl font-bold text-[#494545] md:text-xl lg:text-[18px] underline mt-4 tracking-widest"
+                  <h2 className={`${sectionHeadingClass} mt-4`}>DIMENSIONS</h2>
+                  <div
+                    className={`mt-4 flex flex-row flex-wrap justify-center gap-8 sm:gap-16 md:gap-24 ${bodyClass}`}
                   >
-                    DIMENSIONS
-                  </h2>
-                  <div className="mt-4 flex flex-row flex-wrap justify-center gap-8 sm:gap-16 md:gap-24 text-[15px] leading-[1.9] text-[#494545]/70 md:text-[16px]">
-                    {dimensions.includes("|") || dimensions.includes(",") || dimensions.includes(";") ? (
+                    {dimensions.includes("|") ||
+                    dimensions.includes(",") ||
+                    dimensions.includes(";") ? (
                       dimensions
                         .split(/[|;,]/)
                         .map((part) => part.trim())
                         .filter(Boolean)
                         .map((part, index) => (
-                          <div key={index} className="font-light">
-                            {part}
-                          </div>
+                          <div key={index}>{part}</div>
                         ))
                     ) : (
-                      <div className="font-light w-full">
-                        {dimensions}
-                      </div>
+                      <div className="w-full">{dimensions}</div>
                     )}
                   </div>
                 </div>
@@ -119,27 +132,17 @@ export default async function ProductDetailPage({ params }) {
 
               {delivery && (
                 <div>
-                  <h2
-                    className="text-xl font-bold text-[#494545] md:text-2xl lg:text-[18px] underline mt-4 tracking-widest"
-                  >
-                    DELIVERY
-                  </h2>
-                  <p className="mt-3 text-[15px] leading-[1.9] text-[#494545]/70 md:text-[16px]">
-                    {delivery}
-                  </p>
+                  <h2 className={`${sectionHeadingClass} mt-4`}>DELIVERY</h2>
+                  <p className={`mt-3 ${bodyClass}`}>{delivery}</p>
                 </div>
               )}
 
               {authenticity && (
                 <div>
-                  <h2
-                    className="text-xl font-bold text-[#494545] md:text-xl lg:text-[18px] underline mt-4 tracking-widest"
-                  >
+                  <h2 className={`${sectionHeadingClass} mt-4`}>
                     AUTHENTICITY
                   </h2>
-                  <p className="mt-3 text-[15px] leading-[1.9] text-[#494545]/70 md:text-[16px]">
-                    {authenticity}
-                  </p>
+                  <p className={`mt-3 ${bodyClass}`}>{authenticity}</p>
                 </div>
               )}
             </div>
