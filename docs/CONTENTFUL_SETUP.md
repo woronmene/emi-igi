@@ -44,7 +44,7 @@ Add these fields to the **Product** content type if you want the “See descript
 | -------------- | -------------- | ---------- | --------------------------------------------- |
 | Slug           | slug           | Short text | URL path, e.g. `atupa-oorun` → `/pieces/atupa-oorun` |
 | Detail intro   | detailIntro    | Long text  | Longer opening text on the detail page        |
-| Dimensions     | dimensions     | Long text  | **Dimensions** section (separate values with `\|`, `,`, or `;`) |
+| Dimensions     | dimensions     | Long text  | **Dimensions** section — shown exactly as entered (e.g. `Height: 275mm \| Breadth: 240mm \| Base: 175mm`) |
 | Delivery       | delivery       | Long text  | **Delivery** section                          |
 | Authenticity   | authenticity   | Long text  | **Authenticity** section                      |
 

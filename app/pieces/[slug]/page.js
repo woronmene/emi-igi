@@ -106,23 +106,7 @@ export default async function ProductDetailPage({ params }) {
               {dimensions && (
                 <div>
                   <h2 className={`${sectionHeadingClass} mt-4`}>DIMENSIONS</h2>
-                  <div
-                    className={`mt-4 flex flex-row flex-wrap justify-center gap-8 sm:gap-16 md:gap-24 ${bodyClass}`}
-                  >
-                    {dimensions.includes("|") ||
-                    dimensions.includes(",") ||
-                    dimensions.includes(";") ? (
-                      dimensions
-                        .split(/[|;,]/)
-                        .map((part) => part.trim())
-                        .filter(Boolean)
-                        .map((part, index) => (
-                          <div key={index}>{part}</div>
-                        ))
-                    ) : (
-                      <div className="w-full">{dimensions}</div>
-                    )}
-                  </div>
+                  <p className={`mt-4 ${bodyClass}`}>{dimensions}</p>
                 </div>
               )}
 
