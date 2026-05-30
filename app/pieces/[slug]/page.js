@@ -96,7 +96,7 @@ export default async function ProductDetailPage({ params }) {
           ) : null}
         </div>
 
-        <section className="mt-[12px] space-y-10 w-full md:mt-10 md:space-y-24">
+        <section className="mt-8 space-y-10 w-full md:mt-10 md:space-y-24">
           <p className={`mx-auto max-w-3xl text-center ${bodyClass}`}>
             {detailIntro || description}
           </p>
