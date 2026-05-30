@@ -29,10 +29,10 @@ export default function ProductSection({
   underlineTitle = false,
 }) {
   const content = (
-    <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-12 md:py-24 lg:gap-16">
+    <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-end md:gap-3 md:py-20 lg:gap-4">
       {/* Image column - slides in from left; full-bleed + larger aspect on mobile */}
       <motion.div
-        className="-mx-6 mb-10 flex justify-center flex-1 md:mx-0 md:mb-0  md:max-w-[45%]"
+        className="-mx-6 mb-4 flex justify-center flex-1 md:mx-0 md:mb-0 md:max-w-[48%]"
         initial="off"
         whileInView="on"
         viewport={{ once: true, margin: "-80px" }}
@@ -71,37 +71,37 @@ export default function ProductSection({
         transition={transition}
       >
         <h2
-          className={`text-xl font-bold text-[var(--text-dark)] md:text-2xl lg:text-[24px] ${
-            underlineTitle ? "underline" : ""
-          }`}
+          className="text-xl font-bold text-[var(--text-dark)] md:text-2xl lg:text-[24px]"
         >
           {title}
         </h2>
-        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-6 md:text-[16px]">
+        <p className="mt-4 max-w-xl text-[14px] font-light leading-[30px] text-[#524F4F] md:mt-3 md:text-[16px]">
           {description}
         </p>
         <div className="mt-8 flex w-full flex-row justify-center gap-3 sm:gap-4 md:justify-start md:mt-10">
-          {isSculpture && slug && (
-            <motion.div className="flex flex-1 max-w-[200px] md:max-w-[240px]" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href={`/pieces/${slug}`}
-                className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-white px-2 py-5 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-black shadow-sm ring-1 ring-black/10 transition-all hover:bg-black/5 hover:ring-black/20"
-              >
-                See description
-              </Link>
-            </motion.div>
-          )}
-
+          {/* Become a Collector comes first, text is white, bg is #A08B6D, no border radius */}
           <motion.div className={`flex ${isSculpture && slug ? "flex-1" : "w-full"} max-w-[200px] md:max-w-[240px]`} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
               href="https://wa.me/2349153081531?text=Hello%2CEmi%20Igi%20.%20I%20would%20like%20to%20inquire%20about%20a%20commission%20for%20your%20work%E2%80%A6"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full aspect-[145/35] items-center justify-center rounded-[4px] bg-[#A08B6D] px-2 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-black shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)]"
+              className="flex w-full aspect-[145/35] items-center justify-center rounded-none bg-[#A08B6D] px-2 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-white shadow-md ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)]"
             >
               Become a Collector
             </Link>
           </motion.div>
+
+          {/* See description comes second, bg is #FFFFFF (white), text is black, no border radius */}
+          {isSculpture && slug && (
+            <motion.div className="flex flex-1 max-w-[200px] md:max-w-[240px]" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href={`/pieces/${slug}`}
+                className="flex w-full aspect-[145/35] items-center justify-center rounded-none bg-white px-2 py-5 text-center text-[11px] xs:text-xs sm:text-sm md:text-[15px] font-medium text-black shadow-sm ring-1 ring-black/10 transition-all hover:bg-black/5 hover:ring-black/20"
+              >
+                See description
+              </Link>
+            </motion.div>
+          )}
         </div>
       </motion.div>
     </div>

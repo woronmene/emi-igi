@@ -86,14 +86,14 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
-                className="min-w-0 flex-1 rounded-l-lg border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-6 text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
+                className="min-w-0 flex-1 rounded-none border border-[#b8b4ae] bg-[var(--surface-cream)] px-4 py-6 text-[var(--text-dark)] placeholder:text-[var(--text-dark)]/60 focus:border-[var(--text-dark)]/40 focus:outline-none disabled:opacity-70"
                 aria-label="Email for newsletter"
                 autoComplete="email"
               />
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="rounded-r-lg bg-[#A08B6D] px-6 py-3 font-medium text-black cursor-pointer shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
+                className="rounded-none bg-[#A08B6D] px-6 py-3 font-medium text-black cursor-pointer shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[var(--accent-brown-light)] disabled:opacity-70"
               >
                 {status === "loading" ? "…" : "Subscribe"}
               </button>

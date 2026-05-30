@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 import AnimatedSectionTitle from "./components/AnimatedSectionTitle";
 import { getProducts } from "@/lib/contentful";
 
-// Fetch from Contentful on every request so new/updated products show without redeploy.
-export const dynamic = "force-dynamic";
+// Fetch from Contentful with 10s background revalidation (ISR) for instant load times.
+export const revalidate = 10;
 
 export default async function Home() {
   const { sculptedArt, artMarket } = await getProducts();

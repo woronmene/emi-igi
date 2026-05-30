@@ -52,7 +52,7 @@ export default function Hero() {
             href="https://wa.me/2349153081531?text=Hi%20Emi-igi%2C%20I%20would%20like%20to%20speak%20about%20a%20commission%20of%20one%20of%20the%20pieces"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-[14px] border-2 border-[#FAFAFA]/[0.69] bg-[#FFFFFF]/[0.39] flex items-center justify-center w-[200px] text-center md:w-[400px] py-4 text-base text-[#FFFFFF] transition-all hover:bg-[#FFFFFF]/[0.5] md:mt-10 md:py-8 md:text-[24px]"
+            className="mt-8 inline-block rounded-none border-2 border-[#FAFAFA]/[0.69] bg-[#FFFFFF]/[0.39] flex items-center justify-center w-[200px] text-center md:w-[400px] py-4 text-base text-[#FFFFFF] transition-all hover:bg-[#FFFFFF]/[0.5] md:mt-10 md:py-8 md:text-[24px]"
           >
             <span>Become a Collector</span>
           </Link>
